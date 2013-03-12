@@ -335,6 +335,11 @@ static inline NSAttributedString * NSAttributedStringBySettingColorFromContext(N
     [self addLinkWithTextCheckingResult:result attributes:self.linkAttributes];
 }
 
+- (void)addLinksWithTextCheckingResult:(NSArray *)results
+{
+    [self addLinksWithTextCheckingResults:results attributes:self.linkAttributes];
+}
+
 - (void)addLinkToURL:(NSURL *)url
            withRange:(NSRange)range
 {

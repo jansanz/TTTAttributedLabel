@@ -233,6 +233,13 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
 - (void)addLinkWithTextCheckingResult:(NSTextCheckingResult *)result;
 
 /**
+ Adds links to an `NSTextCheckingResult`.
+ 
+ @param results An array of `NSTextCheckingResult` representing the links' location and type.
+ */
+- (void)addLinksWithTextCheckingResult:(NSArray *)results;
+
+/**
  Adds a link to an `NSTextCheckingResult`.
  
  @param result An `NSTextCheckingResult` representing the link's location and type.
@@ -240,6 +247,15 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
  */
 - (void)addLinkWithTextCheckingResult:(NSTextCheckingResult *)result
                            attributes:(NSDictionary *)attributes;
+
+/**
+ Adds a link to an `NSTextCheckingResult`.
+ 
+ @param results An array of `NSTextCheckingResult` representing the links' location and type.
+ @param attributes The attributes to be added to the text in the range of the specified links. If `nil`, no attributes are added.
+ */
+- (void)addLinksWithTextCheckingResults:(NSArray *)results
+                             attributes:(NSDictionary *)attributes;
 
 /**
  Adds a link to a URL for a specified range in the label text.
